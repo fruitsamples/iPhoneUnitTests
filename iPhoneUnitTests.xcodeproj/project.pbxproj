@@ -7,20 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		170275D70F9E5F6C00938BA7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 170275D50F9E5F6C00938BA7 /* icon.png */; };
-		170275D80F9E5F6C00938BA7 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 170275D60F9E5F6C00938BA7 /* iTunesArtwork.png */; };
-		170275D90F9E5F6C00938BA7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 170275D50F9E5F6C00938BA7 /* icon.png */; };
-		170275DA0F9E5F6C00938BA7 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 170275D60F9E5F6C00938BA7 /* iTunesArtwork.png */; };
 		1702762B0F9E64E400938BA7 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA83B50F997E7D00167681 /* Calculator.m */; };
 		1715D3DD0FA6B69F00A7D3F3 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1715D3DC0FA6B69F00A7D3F3 /* ReadMe.txt */; };
 		17AA83B80F997E7D00167681 /* CalcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA83B30F997E7D00167681 /* CalcAppDelegate.m */; };
 		17AA83B90F997E7D00167681 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA83B50F997E7D00167681 /* Calculator.m */; };
 		17AA83BA0F997E7D00167681 /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA83B70F997E7D00167681 /* CalcViewController.m */; };
-		17AA83BE0F997EAD00167681 /* CalcView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AA83BD0F997EAD00167681 /* CalcView.xib */; };
 		17AA84080F99898000167681 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA83F20F9983E700167681 /* CalculatorTests.m */; };
 		17AA84570F99903800167681 /* CalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA84560F99903800167681 /* CalcTests.m */; };
-		17AA84670F9990FC00167681 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
-		17AA84680F9990FC00167681 /* CalcView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AA83BD0F997EAD00167681 /* CalcView.xib */; };
 		17AA846A0F9990FC00167681 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		17AA846B0F9990FC00167681 /* CalcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA83B30F997E7D00167681 /* CalcAppDelegate.m */; };
 		17AA846C0F9990FC00167681 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA83B50F997E7D00167681 /* Calculator.m */; };
@@ -33,7 +26,18 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
-		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		7E37032A11CA904E00F5DB11 /* CalcView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E37032611CA904E00F5DB11 /* CalcView.xib */; };
+		7E37032B11CA904F00F5DB11 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E37032811CA904E00F5DB11 /* MainWindow.xib */; };
+		7E3705D511CAC3FF00F5DB11 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D011CAC3FF00F5DB11 /* Icon-Small.png */; };
+		7E3705D611CAC3FF00F5DB11 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D111CAC3FF00F5DB11 /* Icon-Small@2x.png */; };
+		7E3705D711CAC3FF00F5DB11 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D211CAC3FF00F5DB11 /* Icon.png */; };
+		7E3705D811CAC3FF00F5DB11 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D311CAC3FF00F5DB11 /* Icon@2x.png */; };
+		7E3705D911CAC3FF00F5DB11 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D411CAC3FF00F5DB11 /* iTunesArtwork.png */; };
+		7E3705DA11CAC3FF00F5DB11 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D011CAC3FF00F5DB11 /* Icon-Small.png */; };
+		7E3705DB11CAC3FF00F5DB11 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D111CAC3FF00F5DB11 /* Icon-Small@2x.png */; };
+		7E3705DC11CAC3FF00F5DB11 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D211CAC3FF00F5DB11 /* Icon.png */; };
+		7E3705DD11CAC3FF00F5DB11 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D311CAC3FF00F5DB11 /* Icon@2x.png */; };
+		7E3705DE11CAC3FF00F5DB11 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E3705D411CAC3FF00F5DB11 /* iTunesArtwork.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		170275D50F9E5F6C00938BA7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		170275D60F9E5F6C00938BA7 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		170276800F9E6D5000938BA7 /* CalcTesting-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CalcTesting-Info.plist"; sourceTree = "<group>"; };
 		1715D3DC0FA6B69F00A7D3F3 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		17AA83B20F997E7D00167681 /* CalcAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcAppDelegate.h; sourceTree = "<group>"; };
@@ -57,7 +59,6 @@
 		17AA83B50F997E7D00167681 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		17AA83B60F997E7D00167681 /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
 		17AA83B70F997E7D00167681 /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
-		17AA83BD0F997EAD00167681 /* CalcView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalcView.xib; sourceTree = "<group>"; };
 		17AA83F20F9983E700167681 /* CalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CalculatorTests.m; path = Test_Suites/CalculatorTests.m; sourceTree = "<group>"; };
 		17AA84030F99894F00167681 /* CalculatorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AA84040F99894F00167681 /* CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalculatorTests-Info.plist"; sourceTree = "<group>"; };
@@ -69,9 +70,15 @@
 		1D6058910D05DD3D006BFB54 /* Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Calc_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calc_Prefix.pch; sourceTree = "<group>"; };
+		7E37032711CA904E00F5DB11 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CalcView.xib; sourceTree = "<group>"; };
+		7E37032911CA904E00F5DB11 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		7E3705D011CAC3FF00F5DB11 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Images/Icon-Small.png"; sourceTree = "<group>"; };
+		7E3705D111CAC3FF00F5DB11 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Images/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		7E3705D211CAC3FF00F5DB11 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Images/Icon.png; sourceTree = "<group>"; };
+		7E3705D311CAC3FF00F5DB11 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Images/Icon@2x.png"; sourceTree = "<group>"; };
+		7E3705D411CAC3FF00F5DB11 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = Images/iTunesArtwork.png; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Calc-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Calc-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,14 +179,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7E37033F11CA92F200F5DB11 /* Images */,
+				7E37032611CA904E00F5DB11 /* CalcView.xib */,
+				7E37032811CA904E00F5DB11 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Calc-Info.plist */,
 				170276800F9E6D5000938BA7 /* CalcTesting-Info.plist */,
 				17AA84430F998E4F00167681 /* CalcTests-Info.plist */,
 				17AA84040F99894F00167681 /* CalculatorTests-Info.plist */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				17AA83BD0F997EAD00167681 /* CalcView.xib */,
-				170275D50F9E5F6C00938BA7 /* icon.png */,
-				170275D60F9E5F6C00938BA7 /* iTunesArtwork.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -192,6 +198,18 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7E37033F11CA92F200F5DB11 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7E3705D011CAC3FF00F5DB11 /* Icon-Small.png */,
+				7E3705D111CAC3FF00F5DB11 /* Icon-Small@2x.png */,
+				7E3705D211CAC3FF00F5DB11 /* Icon.png */,
+				7E3705D311CAC3FF00F5DB11 /* Icon@2x.png */,
+				7E3705D411CAC3FF00F5DB11 /* iTunesArtwork.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +296,13 @@
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iPhoneUnitTests" */;
 			compatibilityVersion = "Xcode 3.1";
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,10 +335,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				17AA847A0F9991B700167681 /* CalcTests.octest in Resources */,
-				17AA84670F9990FC00167681 /* MainWindow.xib in Resources */,
-				17AA84680F9990FC00167681 /* CalcView.xib in Resources */,
-				170275D90F9E5F6C00938BA7 /* icon.png in Resources */,
-				170275DA0F9E5F6C00938BA7 /* iTunesArtwork.png in Resources */,
+				7E3705DA11CAC3FF00F5DB11 /* Icon-Small.png in Resources */,
+				7E3705DB11CAC3FF00F5DB11 /* Icon-Small@2x.png in Resources */,
+				7E3705DC11CAC3FF00F5DB11 /* Icon.png in Resources */,
+				7E3705DD11CAC3FF00F5DB11 /* Icon@2x.png in Resources */,
+				7E3705DE11CAC3FF00F5DB11 /* iTunesArtwork.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,11 +347,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
-				17AA83BE0F997EAD00167681 /* CalcView.xib in Resources */,
-				170275D70F9E5F6C00938BA7 /* icon.png in Resources */,
-				170275D80F9E5F6C00938BA7 /* iTunesArtwork.png in Resources */,
 				1715D3DD0FA6B69F00A7D3F3 /* ReadMe.txt in Resources */,
+				7E37032A11CA904E00F5DB11 /* CalcView.xib in Resources */,
+				7E37032B11CA904F00F5DB11 /* MainWindow.xib in Resources */,
+				7E3705D511CAC3FF00F5DB11 /* Icon-Small.png in Resources */,
+				7E3705D611CAC3FF00F5DB11 /* Icon-Small@2x.png in Resources */,
+				7E3705D711CAC3FF00F5DB11 /* Icon.png in Resources */,
+				7E3705D811CAC3FF00F5DB11 /* Icon@2x.png in Resources */,
+				7E3705D911CAC3FF00F5DB11 /* iTunesArtwork.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +439,25 @@
 			targetProxy = 17AA84780F9991A800167681 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7E37032611CA904E00F5DB11 /* CalcView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E37032711CA904E00F5DB11 /* en */,
+			);
+			name = CalcView.xib;
+			sourceTree = SOURCE_ROOT;
+		};
+		7E37032811CA904E00F5DB11 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7E37032911CA904E00F5DB11 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		17AA84050F99895000167681 /* Debug */ = {
@@ -575,7 +623,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Debug;
 		};
@@ -589,7 +637,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = iphonesimulator3.0;
+				SDKROOT = iphoneos4.0;
 			};
 			name = Release;
 		};

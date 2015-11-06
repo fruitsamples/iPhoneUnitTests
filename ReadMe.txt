@@ -3,8 +3,8 @@ iPhoneUnitTests
 This example illustrates the use of unit tests to ensure that an application’s functionality does not degrade as its source code undergoes changes to improve the application or to fix bugs. The project showcases two types of unit tests: logic and application. Logic unit tests allow for stress-testing source code. Application unit tests help ensure the correct linkage between user-interface controls, controller objects, and model objects.
 
 Software requirements
-Buildtime: iPhone SDK 3.0 or later.
-Runtime:   iPhone OS 3.0 or later.
+Build Requirements: iOS SDK 4.0
+Runtime Requirements: iOS 4.0
 
 
 The iPhoneUnitTests project contains four targets:
@@ -153,5 +153,16 @@ Related Information
 For more information, see the “Unit Testing iPhone Applications” chapter in
 iPhone Development Guide.
 
-Copyright © 2009 Apple Inc. All rights reserved.
+———————————————————————————————————————————————————————————————————————————————
+Build Requirements: iOS SDK 4.0
+Runtime Requirements: iOS 4.0
+
+———————————————————————————————————————————————————————————————————————————————
+Version 1.1
+Upgraded project to build with the iOS 4 SDK.
+
+Version 1.0
+First Version
+
+Copyright © 2010 Apple Inc. All rights reserved.
 
