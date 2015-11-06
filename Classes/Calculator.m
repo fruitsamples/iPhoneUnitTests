@@ -1,7 +1,7 @@
 /*
      File: Calculator.m
  Abstract: This file implements the Calculator class.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -105,6 +105,7 @@ const NSString *Clear     = @"C";
             [_display appendString:input_character];
          }
       }
+   
       // Is input_character in Operators or is it Equals?
       else if ([Operators rangeOfString:input_character].length || [input_character isEqualToString:(NSString *)Equals]) {
          if (!_operator && ![input_character isEqualToString:(NSString *)Equals]) {
@@ -171,7 +172,7 @@ const NSString *Clear     = @"C";
       // Raise exception for unexpected character.
       NSException *exception = [NSException exceptionWithName:NSInvalidArgumentException
                                  reason:@"The input_character parameter contains an unexpected value."
-                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys: @"arg0", input_character, nil]];
+                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys: input_character, @"arg0", nil]];
       [exception raise];
    }
 }

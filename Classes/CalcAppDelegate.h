@@ -1,7 +1,7 @@
 /*
      File: CalcAppDelegate.h
  Abstract: This file declares the interface for the Calc application delegate.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following

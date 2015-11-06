@@ -1,7 +1,7 @@
 /*
      File: CalcAppDelegate.m
  Abstract: This file implements the Calc application delegate.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -56,7 +56,7 @@
 - (void) applicationDidFinishLaunching:(UIApplication *)application {    
 
    // Override point for customization after application launch
-   CalcViewController *_calcViewController = [[CalcViewController alloc] initWithNibName:@"CalcView" bundle:nil];
+   CalcViewController *_calcViewController = [[CalcViewController alloc] initWithNibName:@"CalcView" bundle:[NSBundle mainBundle]];
    self.calcViewController = _calcViewController;
    [window addSubview:[calcViewController view]];
    [window makeKeyAndVisible];

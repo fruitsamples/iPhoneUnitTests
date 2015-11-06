@@ -1,7 +1,7 @@
 /*
      File: CalculatorTests.m
  Abstract: This file implements unit tests for the Calculator class.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -161,9 +161,9 @@
  */
 - (void) testInputException {
    NSLog(@"%@ start", self.name);
-   STAssertThrows([calculator input:@"67"], @"No exception for multicharacter input.");
-   STAssertThrows([calculator input:@"j"],  @"No exception for invalid input.");
-   STAssertThrows([calculator input:nil],   @"No exception for nil input.");
+	STAssertThrows([calculator input:@"67"], @"No exception for multicharacter input.");
+	STAssertThrows([calculator input:@"j"],  @"No exception for invalid input.");
+	STAssertThrows([calculator input:nil],   @"No exception for nil input.");
    NSLog(@"%@ end", self.name);
 }
 

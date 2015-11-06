@@ -1,10 +1,12 @@
-iPhoneUnitTests
+iPhoneUnitTests illustrates the use of unit tests to ensure that an application’s functionality does not degrade as its source code undergoes changes to improve the application or to fix bugs. The project showcases two types of unit tests: logic and application. Logic unit tests allow for stress-testing source code. Application unit tests help ensure the correct linkage between user-interface controls, controller objects, and model objects.
 
-This example illustrates the use of unit tests to ensure that an application’s functionality does not degrade as its source code undergoes changes to improve the application or to fix bugs. The project showcases two types of unit tests: logic and application. Logic unit tests allow for stress-testing source code. Application unit tests help ensure the correct linkage between user-interface controls, controller objects, and model objects.
 
-Software requirements
-Build Requirements: iOS SDK 4.0
-Runtime Requirements: iOS 4.0
+Build Requirements:
+iOS SDK 4.1 or later.
+
+
+Runtime Requirements:
+iOS OS 4.0 or later.
 
 
 The iPhoneUnitTests project contains four targets:
@@ -22,10 +24,11 @@ which has two main methods: input: and displayValue.
 
 - input:.       This method accepts a one-character string as input.
                 This string represents key presses.
-- diaplayValue. This method provides the value representing the calculator’s
+- displayValue. This method provides the value representing the calculator’s
                 output: As each key is pressed, the display value changes,
                 as it would on a hardware-based calculator.
 
+Important: Make sure that the Base SDK is set to iOS Device 4.1 for the project and all targets before running the tests.
 
 ———————————————————————————————————————————————————————————————————————————————
 CalculatorTests Target
@@ -42,7 +45,6 @@ case, the CalcTesting target.
 
 Important: Application-tests targets cannot be built directly.
 
-
 ———————————————————————————————————————————————————————————————————————————————
 CalcTesting Target
 The CalcTesting target is a copy of the Calc target. Its purpose is to build
@@ -52,12 +54,11 @@ Important: Application targets with unit tests cannot be built or run using the
 iPhone Simulator SDK; they can be built and run only using the iPhone Device
 SDK. You cannot build or run CalcTesting using the iPhone Simulator SDK.
 
-
 ———————————————————————————————————————————————————————————————————————————————
 Running Logic Tests
 To run the logic tests:
 1. Choose Project > Set Active Target > CalculatorTests.
-2. Choose Project > Set Active SDK > iPhone Simulator 3.0 (or later).
+2. Choose Project > Set Active SDK > Simulator.
 3. Choose Build > Build. Xcode runs the test cases implemented in
    the CalculatorTests.m file.
 4. Choose Build > Build Results to open the Build Results window, containing
@@ -106,12 +107,11 @@ Remember that logic tests are executed as part of the build process to provide
 you with build errors for failed unit tests. Logic unit-test bundles are not
 intented to run in iPhone Simulator or a device.
 
-
 ———————————————————————————————————————————————————————————————————————————————
 Running Application Tests
 To run the application tests:
 1. Choose Project > Set Active Target > CalcTesting.
-2. Choose Project > Set Active SDK > iPhone Device 3.0 (or later).
+2. Choose Project > Set Active SDK > Device.
 3. Choose Build > Build and Run. Xcode builds the target, installs
    the application on your device, launches the application, runs the tests,
    and terminates the application.
@@ -147,17 +147,13 @@ The application-tests results look similar to this:
    Test Suite 'All tests' finished at 2009-05-19 16:17:18 -0700.
    Executed 7 tests, with 0 failures (0 unexpected) in 0.035 (0.168) seconds
 
-
 ———————————————————————————————————————————————————————————————————————————————
 Related Information
-For more information, see the “Unit Testing iPhone Applications” chapter in
-iPhone Development Guide.
+For more information, see the “Unit Testing iPhone Applications” chapter in the iOS Development Guide.
 
-———————————————————————————————————————————————————————————————————————————————
-Build Requirements: iOS SDK 4.0
-Runtime Requirements: iOS 4.0
+Version 1.2
+Fixed bugs. Added workaround for running unit tests against the iPhone Simulator in Xcode 3.2.4 with iOS SDK 4.1.
 
-———————————————————————————————————————————————————————————————————————————————
 Version 1.1
 Upgraded project to build with the iOS 4 SDK.
 

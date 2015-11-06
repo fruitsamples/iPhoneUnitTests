@@ -1,7 +1,7 @@
 /*
      File: main.m
  Abstract: This is the main source file of the application.
-  Version: 1.1
+  Version: 1.2
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
