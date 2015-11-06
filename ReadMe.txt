@@ -1,164 +1,142 @@
-iPhoneUnitTests illustrates the use of unit tests to ensure that an application’s functionality does not degrade as its source code undergoes changes to improve the application or to fix bugs. The project showcases two types of unit tests: logic and application. Logic unit tests allow for stress-testing source code. Application unit tests help ensure the correct linkage between user-interface controls, controller objects, and model objects.
+iPhoneUnitTests illustrates the use of unit tests to ensure that an application�s functionality does not degrade as its source code undergoes changes to improve the application or to fix bugs. The project showcases two types of unit tests: logic and application. Logic unit tests allow for stress-testing source code. Application unit tests help ensure the correct linkage between user-interface controls, controller objects, and model objects.
 
+Minimum Buildtime Requirements:
+- iOS SDK 4.3
 
-Build Requirements:
-iOS SDK 4.1 or later.
+Minimum Runtime Requirements:
+- Simulator: iPhone/iPad 4.1 simulator
+- Device:    iOS 4.1
 
+The iPhoneUnitTests project defines two schemes:
+- iOS_Calc.       Runs the Calc application, and performs application unit tests on it.
+- Calculator-iOS. Performs logic unit tests on the Calculator class.
 
-Runtime Requirements:
-iOS OS 4.0 or later.
+The project contains four targets:
+- iOS_Calc.                  Builds the Calc application.
+- iOS_Calc_ApplicationTests. Implements the application unit-test suite for the Calc application. 
+- Calculator-iOS.            Builds the Calculator-iOS static library.
+- Calculator-iOS_LogicTests. Implements the logic unit-test suite for the Calculator class.
 
+--------------------------------------------------------------------------------------
+iOS_Calc Target
+- This target builds an iPhone application (Calc) that implements a simple 
+arithmetic calculator.
 
-The iPhoneUnitTests project contains four targets:
-- Calc.            Builds the Calc application, a simple arithmetic calculator.
-- CalcTesting.     Builds the Calc application and embeds the CalcTests test
-                   suite in it.
-- CalcTests.       Builds the CalcTests test suite.
-- CalculatorTests. Builds the CalculatorTests test suite.
+iOS_Calc_ApplicationTests Target
+- This target builds a unit-test bundle containing an application unit-test
+suite (CalcApplicationTests) for the Calc application.
 
+Calculator-iOS Target
+- This target builds the static library that the Calc application uses to process its input and generate output to display to the user.
+- The calculating engine is implemented in the Calculator class,
+which has two main methods: input: and displayValue:
+- The input: method accepts a one-character string as input, which represents a key press.
+- The displayValue method provides the value representing the calculator�s output: As each key is pressed, the display value changes, as it would on a hardware-based calculator.
 
-Calc Target
-The Calc target builds an iPhone application that implements a simple
-calculator. The calculating engine is implemented in the Calculator class,
-which has two main methods: input: and displayValue.
+Calculator-iOS_LogicTests Target
+- This target builds a unit-test bundle containing logic tests for the Calculator class.
 
-- input:.       This method accepts a one-character string as input.
-                This string represents key presses.
-- displayValue. This method provides the value representing the calculator’s
-                output: As each key is pressed, the display value changes,
-                as it would on a hardware-based calculator.
+--------------------------------------------------------------------------------------
+Running Logic Tests on Calculator-iOS
+- To run the logic tests:
+  1. From the scheme toolbar menu, choose Calculator-iOS > iPhone 4.3 Simulator.
+  2. Choose Product > Test. Xcode runs the test cases implemented in the CalculatorLogicTests.m file.
+  3. Choose View > Navigators > Log to open the log navigator, containing the tests results.
+  4. In the list on the left, select the Test Calculator-iOS_LogicTests session to view the test session log. 
 
-Important: Make sure that the Base SDK is set to iOS Device 4.1 for the project and all targets before running the tests.
+The results of the tests look similar to this:
 
-———————————————————————————————————————————————————————————————————————————————
-CalculatorTests Target
-The CalculatorTests target builds a unit-test bundle containing logic tests.
+GNU gdb 6.3.50-20050815 (Apple version gdb-1518) (Sat Feb 12 02:52:12 UTC 2011)
+Copyright 2004 Free Software Foundation, Inc.
+GDB is free software, covered by the GNU General Public License, and you are
+...
+Test Suite 'CalculatorLogicTests' started at 2011-08-05 00:46:04 +0000
+Test Case '-[CalculatorLogicTests testAddition]' started.
+2011-08-04 17:46:04.333 otest[3858:903] -[CalculatorLogicTests testAddition] setUp
+2011-08-04 17:46:04.334 otest[3858:903] -[CalculatorLogicTests testAddition] start
+2011-08-04 17:46:04.337 otest[3858:903] -[CalculatorLogicTests testAddition] end
+2011-08-04 17:46:04.338 otest[3858:903] -[CalculatorLogicTests testAddition] tearDown
+Test Case '-[CalculatorLogicTests testAddition]' passed (0.005 seconds).
+Test Case '-[CalculatorLogicTests testClearComputation]' started.
+2011-08-04 17:46:04.338 otest[3858:903] -[CalculatorLogicTests testClearComputation] setUp
+2011-08-04 17:46:04.339 otest[3858:903] -[CalculatorLogicTests testClearComputation] start
+2011-08-04 17:46:04.340 otest[3858:903] -[CalculatorLogicTests testClearComputation] end
+2011-08-04 17:46:04.340 otest[3858:903] -[CalculatorLogicTests testClearComputation] tearDown
+Test Case '-[CalculatorLogicTests testClearComputation]' passed (0.002 seconds).
+Test Case '-[CalculatorLogicTests testClearLastEntry]' started.
+2011-08-04 17:46:04.341 otest[3858:903] -[CalculatorLogicTests testClearLastEntry] setUp
+2011-08-04 17:46:04.341 otest[3858:903] -[CalculatorLogicTests testClearLastEntry] start
+2011-08-04 17:46:04.342 otest[3858:903] -[CalculatorLogicTests testClearLastEntry] end
+2011-08-04 17:46:04.342 otest[3858:903] -[CalculatorLogicTests testClearLastEntry] tearDown
+Test Case '-[CalculatorLogicTests testClearLastEntry]' passed (0.002 seconds).
+...
+Test Suite 'CalculatorLogicTests' finished at 2011-08-05 00:46:04 +0000.
+Executed 8 tests, with 0 failures (0 unexpected) in 0.033 (0.036) seconds
+...
+Executed 8 tests, with 0 failures (0 unexpected) in 0.033 (0.063) seconds
 
-Important: Logic-tests targets can be built only using the iPhone Simulator
-SDK. You cannot build or run CalculatorTests using the iPhone Device SDK.
-
-———————————————————————————————————————————————————————————————————————————————
-CalcTests Target
-The CalcTests target builds a unit-test bundle containing application tests.
-You build as part of the target that builds the application to test. In this
-case, the CalcTesting target.
-
-Important: Application-tests targets cannot be built directly.
-
-———————————————————————————————————————————————————————————————————————————————
-CalcTesting Target
-The CalcTesting target is a copy of the Calc target. Its purpose is to build
-the Calc application and embed the CalcTests test suite into it.
-
-Important: Application targets with unit tests cannot be built or run using the
-iPhone Simulator SDK; they can be built and run only using the iPhone Device
-SDK. You cannot build or run CalcTesting using the iPhone Simulator SDK.
-
-———————————————————————————————————————————————————————————————————————————————
-Running Logic Tests
-To run the logic tests:
-1. Choose Project > Set Active Target > CalculatorTests.
-2. Choose Project > Set Active SDK > Simulator.
-3. Choose Build > Build. Xcode runs the test cases implemented in
-   the CalculatorTests.m file.
-4. Choose Build > Build Results to open the Build Results window, containing
-   the tests results. You may have to click the Show Transcript button (the
-   third button on the bottom-left corner of the build results list) to view
-   the build transcript.
-
-The logic-tests results look similar to this:
-
-   PhaseScriptExecution <project_directory>/build/iPhoneUnitTests.build/Debug-iphonesimulator/CalculatorTests.build/Script-17AA84010F99894F00167681.sh
-       cd <project_directory>
-       /bin/sh -c <project_directory>/build/iPhoneUnitTests.build/Debug-iphonesimulator/CalculatorTests.build/Script-17AA84010F99894F00167681.sh
-   /Developer/Tools/RunPlatformUnitTests.include:364: note: Started tests for architectures 'i386'
-   /Developer/Tools/RunPlatformUnitTests.include:371: note: Running tests for architecture 'i386' (GC OFF)
-   objc[1222]: GC: forcing GC OFF because OBJC_DISABLE_GC is set
-   objc[1222]: GC: forcing GC OFF because OBJC_DISABLE_GC is set
-   Test Suite '<project_directory>/build/Debug-iphonesimulator/CalculatorTests.octest(Tests)' started at 2009-05-19 16:55:28 -0700
-   Test Suite 'CalculatorTests' started at 2009-05-19 16:55:28 -0700
-   <time> otest[1222:80f] -[CalculatorTests testAddition] setUp
-   <time> otest[1222:80f] -[CalculatorTests testAddition] start
-   <time> otest[1222:80f] -[CalculatorTests testAddition] end
-   <time> otest[1222:80f] -[CalculatorTests testAddition] tearDown
-   Test Case '-[CalculatorTests testAddition]' passed (0.007 seconds).
-   <time> otest[1222:80f] -[CalculatorTests testDivision] setUp
-   <time> otest[1222:80f] -[CalculatorTests testDivision] start
-   <time> otest[1222:80f] -[CalculatorTests testDivision] end
-   <time> otest[1222:80f] -[CalculatorTests testDivision] tearDown
-   Test Case '-[CalculatorTests testDivision]' passed (0.003 seconds).
-   <time> otest[1222:80f] -[CalculatorTests testInputException] setUp
-   <time> otest[1222:80f] -[CalculatorTests testInputException] start
-   <time> otest[1222:80f] -[CalculatorTests testInputException] end
-   <time> otest[1222:80f] -[CalculatorTests testInputException] tearDown
-   ...
-   Test Case '-[CalculatorTests testSubtractionNegativeResult]' passed (0.002 seconds).
-   Test Suite 'CalculatorTests' finished at 2009-05-19 16:55:28 -0700.
-   Executed 6 tests, with 0 failures (0 unexpected) in 0.021 (0.022) seconds
-
-   Test Suite '<project_directory>/build/Debug-iphonesimulator/CalculatorTests.octest(Tests)' finished at 2009-05-19 16:55:28 -0700.
-   Executed 6 tests, with 0 failures (0 unexpected) in 0.021 (0.024) seconds
-
-   /Developer/Tools/RunPlatformUnitTests.include:388: note: Passed tests for architecture 'i386' (GC OFF)
-   /Developer/Tools/RunPlatformUnitTests.include:399: note: Completed tests for architectures 'i386'
-
-
-Remember that logic tests are executed as part of the build process to provide
-you with build errors for failed unit tests. Logic unit-test bundles are not
-intented to run in iPhone Simulator or a device.
-
-———————————————————————————————————————————————————————————————————————————————
+--------------------------------------------------------------------------------------
 Running Application Tests
-To run the application tests:
-1. Choose Project > Set Active Target > CalcTesting.
-2. Choose Project > Set Active SDK > Device.
-3. Choose Build > Build and Run. Xcode builds the target, installs
-   the application on your device, launches the application, runs the tests,
-   and terminates the application.
-4. Choose Run > Console to open the Console window, containing
-   the test results.
+- To run the application tests:
+  1. From the scheme toolbar menu, choose iOS_Calc > <your_device>.
+  2. Choose Product > Test. Xcode runs the test cases implemented in the iOS_CalcApplicationTests.m file.
+  3. Choose View > Navigators > Log to open the log navigator.
+  4. In the list on the left, select the Test iOS_Calc_ApplicationTests session to view the test session log.
 
-The application-tests results look similar to this:
+- The results of the tests look similar to this:
 
-   Test Suite 'All tests' started at 2009-05-19 16:17:18 -0700
-   Test Suite '/Developer/Library/Frameworks/SenTestingKit.framework(Tests)' started at 2009-05-19 16:17:18 -0700
-   Test Suite 'SenInterfaceTestCase' started at 2009-05-19 16:17:18 -0700
-   Test Suite 'SenInterfaceTestCase' finished at 2009-05-19 16:17:18 -0700.
-   Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.009) seconds
+GNU gdb 6.3.50-20050815 (Apple version gdb-1705) (Fri Jul  1 10:47:25 UTC 2011)
+Copyright 2004 Free Software Foundation, Inc.
+GDB is free software, covered by the GNU General Public License, and you are
+...
+Test Suite 'All tests' started at 2011-08-05 02:02:50 +0000
+Test Suite '/Developer/Library/Frameworks/SenTestingKit.framework(Tests)' started at 2011-08-05 02:02:50 +0000
+Test Suite 'SenInterfaceTestCase' started at 2011-08-05 02:02:50 +0000
+Test Suite 'SenInterfaceTestCase' finished at 2011-08-05 02:02:50 +0000.
+Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.002) seconds
 
-   Test Suite '/Developer/Library/Frameworks/SenTestingKit.framework(Tests)' finished at 2009-05-19 16:17:18 -0700.
-   Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.031) seconds
+Test Suite '/Developer/Library/Frameworks/SenTestingKit.framework(Tests)' finished at 2011-08-05 02:02:50 +0000.
+Executed 0 tests, with 0 failures (0 unexpected) in 0.000 (0.009) seconds
 
-   Test Suite '/var/mobile/Applications/B808F084-EF94-42B3-AB2E-1B1938690AE1/Calc.app/CalcTests.octest(Tests)' started at 2009-05-19 16:17:18 -0700
-   Test Suite 'CalcTests' started at 2009-05-19 16:17:18 -0700
-   Test Case '-[CalcTests testAddition]' passed (0.008 seconds).
-   Test Case '-[CalcTests testAppDelegate]' passed (0.000 seconds).
-   Test Case '-[CalcTests testClear]' passed (0.010 seconds).
-   Test Case '-[CalcTests testDelete]' passed (0.006 seconds).
-   Test Case '-[CalcTests testDivision]' passed (0.004 seconds).
-   Test Case '-[CalcTests testMultiplication]' passed (0.004 seconds).
-   Test Case '-[CalcTests testSubtraction]' passed (0.003 seconds).
-   Test Suite 'CalcTests' finished at 2009-05-19 16:17:18 -0700.
-   Executed 7 tests, with 0 failures (0 unexpected) in 0.035 (0.077) seconds
+Test Suite '/var/mobile/Applications/C3898898-E45A-437E-B41C-122A91075031/iOS_Calc_ApplicationTests.octest(Tests)' started at 2011-08-05 02:02:50 +0000
+Test Suite 'CalcApplicationTests' started at 2011-08-05 02:02:50 +0000
+Test Case '-[CalcApplicationTests testAddition]' started.
+Test Case '-[CalcApplicationTests testAddition]' passed (0.007 seconds).
+Test Case '-[CalcApplicationTests testAppDelegate]' started.
+Test Case '-[CalcApplicationTests testAppDelegate]' passed (0.001 seconds).
+Test Case '-[CalcApplicationTests testClear]' started.
+Test Case '-[CalcApplicationTests testClear]' passed (0.004 seconds).
+Test Case '-[CalcApplicationTests testDelete]' started.
+Test Case '-[CalcApplicationTests testDelete]' passed (0.002 seconds).
+Test Case '-[CalcApplicationTests testDivision]' started.
+Test Case '-[CalcApplicationTests testDivision]' passed (0.003 seconds).
+Test Case '-[CalcApplicationTests testMultiplication]' started.
+Test Case '-[CalcApplicationTests testMultiplication]' passed (0.002 seconds).
+Test Case '-[CalcApplicationTests testSubtraction]' started.
+Test Case '-[CalcApplicationTests testSubtraction]' passed (0.002 seconds).
+Test Suite 'CalcApplicationTests' finished at 2011-08-05 02:02:50 +0000.
+Executed 7 tests, with 0 failures (0 unexpected) in 0.020 (0.031) seconds
 
-   Test Suite '/var/mobile/Applications/B808F084-EF94-42B3-AB2E-1B1938690AE1/Calc.app/CalcTests.octest(Tests)' finished at 2009-05-19 16:17:18 -0700.
-   Executed 7 tests, with 0 failures (0 unexpected) in 0.035 (0.097) seconds
+Test Suite '/var/mobile/Applications/C3898898-E45A-437E-B41C-122A91075031/iOS_Calc_ApplicationTests.octest(Tests)' finished at 2011-08-05 02:02:50 +0000.
+Executed 7 tests, with 0 failures (0 unexpected) in 0.020 (0.037) seconds
 
-   Test Suite 'All tests' finished at 2009-05-19 16:17:18 -0700.
-   Executed 7 tests, with 0 failures (0 unexpected) in 0.035 (0.168) seconds
+Test Suite 'All tests' finished at 2011-08-05 02:02:50 +0000.
+Executed 7 tests, with 0 failures (0 unexpected) in 0.020 (0.061) seconds
 
-———————————————————————————————————————————————————————————————————————————————
+--------------------------------------------------------------------------------------
 Related Information
-For more information, see the “Unit Testing iPhone Applications” chapter in the iOS Development Guide.
+- For more information, see the �Unit Testing Applications� chapter in the iOS Development Workflow Guide.
+
+Version 2.0
+- Updated for Xcode 4.0.2 and iOS SDK 4.3. 
 
 Version 1.2
-Fixed bugs. Added workaround for running unit tests against the iPhone Simulator in Xcode 3.2.4 with iOS SDK 4.1.
+- Fixed bugs. Added workaround for running unit tests against the iPhone Simulator in Xcode 3.2.4 with iOS SDK 4.1.
 
 Version 1.1
-Upgraded project to build with the iOS 4 SDK.
+- Upgraded project to build with the iOS 4 SDK.
 
 Version 1.0
-First Version
+- First Version
 
-Copyright © 2010 Apple Inc. All rights reserved.
-
+Copyright � 2011 Apple Inc. All rights reserved.
